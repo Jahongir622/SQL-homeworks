@@ -81,6 +81,109 @@ SQL Server Microsoft’s Relational Database Management System (RDBMS) that stor
 SSMS (SQL Server Management Studio) A tool/application provided by Microsoft to connect to SQL Server, 
     write queries, manage databases, and visualize data with a GUI.
 
+--7. SQL Command Types
+
+SQL commands are grouped into five categories:
+
+DQL (Data Query Language)
+
+Purpose: Retrieve/query data.
+
+Main command: SELECT
+
+Example:
+
+SELECT * FROM Students;
+
+--DML (Data Manipulation Language)
+
+Purpose: Manipulate existing data (insert, update, delete).
+
+Commands: INSERT, UPDATE, DELETE
+
+Example:
+
+UPDATE Students
+SET Age = 20
+WHERE StudentID = 1;
+
+--DDL (Data Definition Language)
+
+Purpose: Define or modify structure of database objects.
+
+Commands: CREATE, ALTER, DROP, TRUNCATE
+
+Example:
+
+ALTER TABLE Students ADD Email VARCHAR(100);
+
+--DCL (Data Control Language)
+
+Purpose: Control access/permissions.
+
+Commands: GRANT, REVOKE
+
+Example:
+
+GRANT SELECT ON Students TO TeacherUser;
+
+--TCL (Transaction Control Language)
+
+Purpose: Manage transactions (group of SQL statements that execute together).
+
+Commands: BEGIN TRANSACTION, COMMIT, ROLLBACK, SAVEPOINT
+
+Example:
+
+BEGIN TRANSACTION;
+UPDATE Students SET Age = 25 WHERE StudentID = 2;
+ROLLBACK;   -- undo the update
+
+--8. Insert Three Records into Students Table
+
+INSERT INTO Students (StudentID, Name, Age)
+VALUES
+(4, 'Sherzod Bekmurodov', 22),
+(5, 'Malika Usmonova', 18),
+(6, 'Rustam Kamilov', 20);
+
+--9. Restore AdventureWorksDW2022.bak in SQL Server
+
+Here are the steps:
+
+Download the .bak file
+
+From GitHub: AdventureWorksDW2022.bak
+
+Save it to a known location, e.g. C:\Backups\AdventureWorksDW2022.bak
+
+Open SSMS (SQL Server Management Studio).
+
+Connect to your SQL Server instance.
+
+Right-click Databases > Restore Database....
+
+In the Source section:
+
+Select Device → click the ... button.
+
+Add the file AdventureWorksDW2022.bak.
+
+In the Destination section:
+
+Database name should appear as AdventureWorksDW2022 (or you can rename it).
+
+In Files/Options tab:
+
+Make sure file paths for MDF and LDF are valid.
+
+(Optional) Check Overwrite the existing database if restoring over an existing one.
+
+Click OK.
+
+After success, expand Databases in SSMS → You’ll see AdventureWorksDW2022.
+
+Run a test query:
 
 --An addtional hometask by Mentor 
 -- Create Database
