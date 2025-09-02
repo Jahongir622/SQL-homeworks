@@ -1,3 +1,4 @@
+--An addtional hometask by Mentor 
 -- Create Database
 CREATE DATABASE UzbekistanDB;
 GO
