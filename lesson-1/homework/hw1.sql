@@ -1,3 +1,86 @@
+1. Definitions
+
+Data:
+Raw facts and figures that can be recorded and processed. Examples: numbers, text, images, or measurements.
+
+Database:
+An organized collection of related data stored in a structured way so it can be easily retrieved, managed, and updated.
+
+Relational Database (RDB):
+A type of database that stores data in tables (rows and columns). The tables are related to each other through keys (primary key, foreign key). Example: SQL Server, MySQL, Oracle.
+
+Table:
+A structured format inside a database where data is stored in rows (records) and columns (fields). For example, a Students table may have columns like StudentID, Name, and Grade.
+
+2. Five Key Features of SQL Server
+
+Data Storage & Management – Stores structured data in relational tables.
+
+Security – Provides authentication, authorization, and encryption to protect data.
+
+High Availability & Disaster Recovery (HADR) – Features like Always On, backups, and replication.
+
+Scalability & Performance – Optimized query engine, indexing, partitioning, and in-memory processing.
+
+Integration & BI Tools – Works with SSIS (integration), SSRS (reporting), SSAS (analysis) for business intelligence.
+
+3. Authentication Modes in SQL Server
+
+There are two main authentication modes:
+
+Windows Authentication
+
+Uses the Windows user account to log in.
+
+Integrated security → no separate SQL Server username/password needed.
+
+More secure and recommended.
+
+SQL Server Authentication
+
+Uses a username & password created inside SQL Server.
+
+Works even if the user isn’t on the Windows domain.
+
+Often used for applications or external connections.
+
+4. Create Database & Table in SSMS
+
+In SQL Server Management Studio (SSMS)
+-- Create new database
+CREATE DATABASE SchoolDB;
+GO
+
+-- Switch to SchoolDB
+USE SchoolDB;
+GO
+
+-- Create Students table
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT
+);
+
+This creates:
+
+A database named SchoolDB.
+
+A table Students with three columns:
+
+StudentID → integer, primary key (unique for each student).
+
+Name → string (up to 50 characters).
+
+Age → integer.
+    
+5. Differences Between SQL Server, SSMS, and SQL
+SQL (Structured Query Language) A programming language used to interact with databases 
+    (e.g., SELECT, INSERT, UPDATE). It’s a standard, not tied to one company.
+SQL Server Microsoft’s Relational Database Management System (RDBMS) that stores and manages data. It understands SQL queries and executes them.
+SSMS (SQL Server Management Studio) A tool/application provided by Microsoft to connect to SQL Server, 
+    write queries, manage databases, and visualize data with a GUI.
+    
 --An addtional hometask by Mentor 
 -- Create Database
 CREATE DATABASE UzbekistanDB;
