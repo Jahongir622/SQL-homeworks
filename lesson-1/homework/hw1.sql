@@ -1,4 +1,4 @@
-1. Definitions
+--1. Definitions
 
 Data:
 Raw facts and figures that can be recorded and processed. Examples: numbers, text, images, or measurements.
@@ -12,7 +12,7 @@ A type of database that stores data in tables (rows and columns). The tables are
 Table:
 A structured format inside a database where data is stored in rows (records) and columns (fields). For example, a Students table may have columns like StudentID, Name, and Grade.
 
-2. Five Key Features of SQL Server
+--2. Five Key Features of SQL Server
 
 Data Storage & Management – Stores structured data in relational tables.
 
@@ -24,7 +24,7 @@ Scalability & Performance – Optimized query engine, indexing, partitioning, an
 
 Integration & BI Tools – Works with SSIS (integration), SSRS (reporting), SSAS (analysis) for business intelligence.
 
-3. Authentication Modes in SQL Server
+--3. Authentication Modes in SQL Server
 
 There are two main authentication modes:
 
@@ -44,7 +44,7 @@ Works even if the user isn’t on the Windows domain.
 
 Often used for applications or external connections.
 
-4. Create Database & Table in SSMS
+--4. Create Database & Table in SSMS
 
 In SQL Server Management Studio (SSMS)
 -- Create new database
@@ -56,7 +56,7 @@ USE SchoolDB;
 GO
 
 -- Create Students table
-CREATE TABLE Students (
+--5. CREATE TABLE Students (
     StudentID INT PRIMARY KEY,
     Name VARCHAR(50),
     Age INT
@@ -74,13 +74,14 @@ Name → string (up to 50 characters).
 
 Age → integer.
     
-5. Differences Between SQL Server, SSMS, and SQL
+--6. Differences Between SQL Server, SSMS, and SQL
 SQL (Structured Query Language) A programming language used to interact with databases 
     (e.g., SELECT, INSERT, UPDATE). It’s a standard, not tied to one company.
 SQL Server Microsoft’s Relational Database Management System (RDBMS) that stores and manages data. It understands SQL queries and executes them.
 SSMS (SQL Server Management Studio) A tool/application provided by Microsoft to connect to SQL Server, 
     write queries, manage databases, and visualize data with a GUI.
-    
+
+
 --An addtional hometask by Mentor 
 -- Create Database
 CREATE DATABASE UzbekistanDB;
